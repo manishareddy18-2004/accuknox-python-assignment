@@ -1,135 +1,121 @@
 # AccuKnox AI/ML Trainee Assignment
 
-**Candidate:** Muthumula Manisha Reddy  
-**Role:** AI/ML Trainee  
-**Technologies:** Python, REST APIs, SQLite, SQL, CSV, Pandas, Matplotlib
-
 ## Overview
 
-This repository contains the coding tasks completed as part of the AccuKnox AI/ML Trainee assignment. The tasks cover REST API integration, data processing, database operations, and visualization. Links to additional Python and database projects are provided below.
+This repository contains my solutions for the AccuKnox AI/ML Trainee assignment. It demonstrates REST API integration, Python data processing, SQLite database operations, data visualization, and CSV data import.
 
-## Repository Structure
+## Technologies Used
 
-```text
-accuknox-assignment/
-├── task1_books_api/
-│   └── task1_books.py
-├── task2_student_scores/
-│   └── task2_scores.py
-├── task3_csv_sqlite/
-│   ├── task3_users.py
-│   └── users.csv
-├── README.md
-└── requirements.txt
+- Python 3
+- REST APIs and JSON
+- Requests
+- SQLite and SQL
+- CSV processing
+- Matplotlib
+
+## Problem Statement 1: Python Programming Tasks
+
+### Task 1: API Data Retrieval and Storage
+
+**File:** `task1_books.py`
+
+- Fetches book data from the Open Library REST API.
+- Extracts book titles, authors, and publication years from JSON.
+- Removes duplicate book titles.
+- Stores book information in an SQLite database.
+- Retrieves and displays the stored records.
+
+**Concepts:** REST APIs, HTTP requests, JSON parsing, Python sets, SQLite, and SQL queries.
+
+### Task 2: Data Processing and Visualization
+
+**File:** `task2_scores.py`
+
+- Fetches student score data from a REST API.
+- Processes student names and subject scores.
+- Calculates each student's average score.
+- Generates a bar chart to visualize the average scores.
+
+**Concepts:** API integration, data processing, average calculation, and data visualization.
+
+### Task 3: CSV Data Import to Database
+
+**Files:** `task3_csv.py`, `users.csv`, `users.db`
+
+- Reads user information from a CSV file.
+- Creates a `users` table in SQLite.
+- Inserts user names and email addresses using parameterized SQL queries.
+- Retrieves and displays the stored records.
+
+**Concepts:** CSV handling, SQLite database creation, SQL INSERT and SELECT operations.
+
+**Note:** The current implementation does not automatically remove duplicate user records.
+
+## Problem Statement 2: Theory Answers
+
+**File:** `theory answers.pdf`
+
+The PDF contains responses to the theoretical questions in the assignment:
+
+- Self-assessment of LLM, Deep Learning, AI, and ML skills.
+- High-level architecture of an LLM-based chatbot.
+- Explanation of vector databases and selection of a suitable database for a hypothetical use case.
+
+## Most Complex Python Project
+
+### Advanced Python RAG System
+
+**File:** `advanced-rag-system-main.zip`
+
+An advanced Python project focused on retrieval-augmented generation (RAG) for document-based question answering.
+
+The project explores retrieving relevant document information and using a language model to generate context-aware responses.
+
+## Most Complex Database Project
+
+### Advanced Python Database Analytics
+
+**File:** `advanced-database-analytics-main.zip`
+
+An advanced Python project focused on database management, data retrieval, SQL operations, and analytics.
+
+The project demonstrates work related to structured data management and database querying.
+
+## How to Run
+
+### Prerequisites
+
+- Python 3
+- `requests`
+- `matplotlib`
+
+Install the required libraries:
+
+```bash
+pip install requests matplotlib
 ```
 
-*Note: Update the structure above to match the actual filenames and folders in your repository.*
-
-## Coding Tasks
-
-### Task 1: Books API and SQLite
-
-**Objective:** Retrieve book information from a REST API and store the relevant data in a local SQLite database.
-
-**Key concepts:**
-- HTTP requests and JSON response handling
-- Extracting relevant book details
-- SQLite database and table operations
-- Inserting and retrieving records using SQL
-
-**Run:**
+Run the scripts individually:
 
 ```bash
 python3 task1_books.py
-```
-
-### Task 2: Student Scores Analysis
-
-**Objective:** Retrieve student score data from a REST API, calculate average scores, and visualize the results using a bar chart.
-
-**Key concepts:**
-- REST API integration
-- JSON data processing
-- Average score calculation
-- Data visualization using Matplotlib
-
-**Run:**
-
-```bash
 python3 task2_scores.py
+python3 task3_csv.py
 ```
 
-### Task 3: CSV Data Import into SQLite
+For the API-based tasks, an internet connection is required. For Task 3, ensure that `users.csv` is in the same directory as `task3_csv.py`.
 
-**Objective:** Read user information from a CSV file and store the records in an SQLite database.
+## Assumptions
 
-**Key concepts:**
-- CSV file handling
-- Structured data processing
-- SQLite table creation and record insertion
-- SQL-based data retrieval
-
-**Run:**
-
-```bash
-python3 task3_users.py
-```
-
-Ensure the CSV file is available at the path expected by the Python script.
-
-## Additional Complex Projects
-
-### 1. RAG-Based Intelligent Document Assistant
-
-A Python-based document question-answering project that uses a Retrieval-Augmented Generation (RAG) workflow to retrieve relevant document context and generate responses using a language model.
-
-**Technologies:** Python, FastAPI, Large Language Models, Retrieval-Augmented Generation.
-
-**Source code:** [Add your RAG project GitHub URL here]
-
-### 2. Advanced Database Management System
-
-A Python and SQLite project focused on structured data storage, database operations, and SQL-based information retrieval.
-
-**Technologies:** Python, SQLite, SQL.
-
-**Source code:** [Add your database project GitHub URL here]
-
-## Installation and Setup
-
-1. Clone this repository:
-
-   ```bash
-   git clone YOUR_ASSIGNMENT_REPOSITORY_URL
-   ```
-
-2. Navigate to the downloaded repository:
-
-   ```bash
-   cd accuknox-assignment
-   ```
-
-3. Install the dependencies listed in `requirements.txt`:
-
-   ```bash
-   python3 -m pip install -r requirements.txt
-   ```
-
-4. Run each task using the commands in its respective section.
-
-**Note:** The commands assume the Python files are in the repository root. If your files are inside separate task folders, use their actual paths when running them.
-
-## Assumptions and Notes
-
-- API responses are processed according to the structure returned by the respective endpoints.
-- Internet connectivity is required for tasks that fetch data from external APIs.
-- SQLite databases are stored locally and may be generated when the scripts run.
-- Required input files, including CSV files, must be available at the paths expected by the code.
-- Dependencies and execution instructions should be checked against the actual project files before running.
+- The Open Library Search API is used as the external source for book information.
+- Student score data is retrieved from the API specified in the Python script.
+- The CSV file contains `name` and `email` columns.
+- SQLite is used as the local database.
 
 ## Author
 
 **Muthumula Manisha Reddy**
 
-GitHub: https://github.com/manishareddy18-2004  
-Email: venkatamanishareddymuthumula@gmail.com
+GitHub Profile: https://github.com/manishareddy18-2004
+
+Assignment Repository: https://github.com/manishareddy18-2004/accuknox-python-assignment
